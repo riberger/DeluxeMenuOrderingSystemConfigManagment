@@ -1,2 +1,2 @@
-# DeluxeMenuOrderingSystemConfigManagment
-The Deluxe Menu Ordering System helps consumers and businesses smoothen the ordering process. By utilizing a menu and database system, the Deluxe Menu Ordering System will help automate the reading and placing of orders
+# Deluxe Menu Ordering System
+Pop-up System that assists consumers and businesses smoothen the ordering process. Utilizing a menu and database system, the system will help automate the reading and placing of customer orders
