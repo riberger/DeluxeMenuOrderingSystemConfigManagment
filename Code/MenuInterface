@@ -1,1 +1,114 @@
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+
+/**
+ * This program demonstrates the GridPane layout container.
+ */
+public class GridPaneImages extends Application {
+
+    ImageView pic1View, pic2View, pic3View, pic4View;
+
+    public static void main(String[] args) {
+        // Launch the application.
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        // Create the Image components.
+        Image pic1 = new Image("file:Cheeseburger.png");
+        Image pic2 = new Image("file:MilkShakeV2.png");
+        Image pic3 = new Image("file:AmericanoFrenchFries.jpg");
+        Image pic4 = new Image("file:Nuggets.png");
+
+        // Create the ImageView components.
+        pic1View = new ImageView(pic1);
+        pic2View = new ImageView(pic2);
+        pic3View = new ImageView(pic3);
+        pic4View = new ImageView(pic4);
+
+        // Resize the image, preserving its aspect ratio.
+        pic1View.setFitHeight(200);
+        pic1View.setPreserveRatio(true);
+
+        // Resize the image, preserving its aspect ratio.
+        pic2View.setFitHeight(200);
+        pic2View.setPreserveRatio(true);
+
+        // Resize the image, preserving its aspect ratio.
+        pic3View.setFitHeight(200);
+        pic3View.setPreserveRatio(true);
+
+        // Resize the image, preserving its aspect ratio.
+        pic4View.setFitHeight(200);
+       // pic4View.setFitWidth(200);
+        pic4View.setPreserveRatio(true);
+
+        // Create a GridPane.
+        GridPane gridpane = new GridPane();
+
+        // Set the gap sizes.
+        gridpane.setVgap(10);
+        gridpane.setHgap(10);
+
+        // Set the GridPane's padding.
+        gridpane.setPadding(new Insets(30));
+
+        // Create a Scene with the GridPane as its root node.
+        Scene scene = new Scene(gridpane);
+
+        // Add the Scene to the Stage.
+        primaryStage.setScene(scene);
+
+        // Set the stage title.
+        primaryStage.setTitle("Deluxe Menu Ordering System");
+
+        // Show the window.
+        primaryStage.show();
+        
+
+       // Add Button
+        Button fooditem1 = new Button();
+        fooditem1.setGraphic(pic1View);
+        fooditem1.setPrefSize(80, 80);
+
+         // Add Button
+        Button fooditem2 = new Button();
+        fooditem2.setGraphic(pic2View);
+        fooditem2.setPrefSize(80, 80);
+        
+        // Add Button
+        Button fooditem3 = new Button();
+        fooditem3.setGraphic(pic3View);
+        fooditem3.setPrefSize(80, 80);
+        
+        // Add Button
+        Button fooditem4 = new Button();
+        fooditem4.setGraphic(pic4View);
+        fooditem4.setPrefSize(80, 80);
+          
+           // Add the ImageViews to the GridPane.
+        gridpane.add(fooditem1, 0, 0);     // Col 0, Row 0
+        gridpane.add(fooditem2, 1, 0);     // Col 1, Row 0
+        gridpane.add(fooditem3, 0, 1);   // Col 0, Row 1
+        gridpane.add(fooditem4, 1, 1);   // Col 1, Row 1
+        //Button Function
+        fooditem1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+           
+            }
+        });
+    }
+}
 
