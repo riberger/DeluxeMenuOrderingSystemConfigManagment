@@ -1,1 +1,30 @@
+import java.util.ArrayList;
 
+public class MenuItem {
+    
+    protected String name;
+    protected int id;
+    protected String description;
+    protected String ingredients;
+    
+    public static int count;
+    
+    public MenuItem(String name1, String description1, String ingredients1) {
+        name = name1;
+        description = description1;
+        ingredients = ingredients1;
+        id = count;
+        count++;
+    }
+    
+    public static void main(String[] args) {
+        MenuItem burger = new MenuItem("BamBerger","Its a Berger","Rich Berger");
+        System.out.println(burger);
+    }
+    
+    @Override
+    public String toString() {
+    return "Name: " + name + " \nDescription: " + description + " \nIngredients: " + ingredients + " \nID: " + id;
+    }
+    
+}
